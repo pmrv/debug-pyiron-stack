@@ -26,14 +26,15 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Merge environment
+      shell: bash -l {0}
       run: |
         git clone https://github.com/pyiron/pyiron_base
         cd pyiron_base
-        git checkout %PYIRON_BASE_BRANCH%
+        git checkout ${PYIRON_BASE_BRANCH%}
         cd ..
         git clone https://github.com/pyiron/pyiron_atomistics
         cd pyiron_atomistics
-        git checkout %PYIRON_ATOMISTICS_BRANCH%
+        git checkout ${PYIRON_ATOMISTICS_BRANCH}
         cd ..
     - name: Setup Mambaforge
       uses: conda-incubator/setup-miniconda@v3
