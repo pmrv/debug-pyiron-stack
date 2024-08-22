@@ -13,11 +13,11 @@ jobs:
       run: |
         git clone https://github.com/pyiron/pyiron_base
         cd pyiron_base
-        git checkout server  # insert your branch here 
+        git checkout ${PYIRON_BASE_BRANCH} 
         cd ..
         git clone https://github.com/pyiron/pyiron_atomistics
         cd pyiron_atomistics
-        git checkout dependabot/pip/pyiron-base-0.10.0  # insert your branch here
+        git checkout ${PYIRON_ATOMISTICS_BRANCH}
         cd ..
         cp pyiron_atomistics/.ci_support/environment.yml environment.yml
         tail --lines=+4 pyiron_atomistics/.ci_support/environment-notebooks.yml >> environment.yml
