@@ -2,7 +2,9 @@ name: Compatibility with pyiron_atomistics Notebooks
 
 on:
   push:
-    branches: [ main ]
+env:
+  PYIRON_BASE_BRANCH: ${{ vars.PYIRON_BASE_BRANCH }}
+  PYIRON_ATOMISTICS_BRANCH: ${{ vars.PYIRON_ATOMISTICS_BRANCH }}
 
 jobs:
   build:
