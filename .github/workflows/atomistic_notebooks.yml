@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - name: Merge environment
+    - name: Clone repositories
       run: |
         git clone https://github.com/pyiron/pyiron_base
         cd pyiron_base
