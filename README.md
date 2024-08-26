@@ -3,3 +3,6 @@ This repository simplifies the debugging of the interface between `pyiron_base` 
 
 * `PYIRON_BASE_BRANCH` - branch of `pyiron_base` reprository to use
 * `PYIRON_ATOMISTICS_BRANCH` - branch of `pyiron_atomistics` repository to use
+
+Setup the environments variables in the `Settings` tab under `Secrets and Variables` > `Actions` in the tab for `Variables`:
+![Screenshot](screenshot.png)
